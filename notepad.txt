@@ -1,0 +1,25 @@
+Docker
+
+xhost +local:docker
+sudo docker run -it  --gpus all --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/ignacio/blumland:/home/blumland:rw" ros-noetic-blumland
+
+
+Installation stuff
+
+- forgot to add: to make te robot launch correctly using the provided dockerfile: (to do: add these packages to the image)
+
+sudo apt-get update
+sudo apt-get install ros-noetic-ros-controllers
+sudo apt-get install ros-noetic-joint-trajectory-controller
+
+
+- move it install and config
+sudo apt-get update
+sudo apt install ros-noetic-moveit
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+
+roslaunch moveit_setup_assistant setup_assistant.launch
+
+Launch full
+
+roslaunch moveit_robot_arm_sim full_robot_arm_sim.launch
