@@ -1,7 +1,7 @@
 Docker
 
 xhost +local:docker
-sudo docker run -it  --gpus all --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/ignacio/blumland:/home/blumland:rw" ros-noetic-blumland
+sudo docker run -it  --gpus all --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/ignacio/simple_ros_noetic_manipulator:/home/manipulator:rw" ros-noetic-blumland
 
 
 Installation stuff
